@@ -26,13 +26,15 @@ export default function Event(props) {
               {event.seatCount > 0 ? (
                 <span className="success">Open</span>
               ) : (
-                <span className="error">Closed</span>
+                <span className="danger">Closed</span>
               )}
             </div>
           </div>
         </li>
+        {event.seatCount > 0 && (
 
         <button className="primary block">Register</button>
+        )}
       </ul>
     </div>
   );
