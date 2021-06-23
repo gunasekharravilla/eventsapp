@@ -27,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #2b89e7;
 }
 main {
   grid-area: main;
@@ -78,8 +78,9 @@ img {
   border-radius: 0.5rem;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 60rem;
   width: 100%;
+  max-height: 60rem;
 }
 
 /* Card */
@@ -100,6 +101,6 @@ img.medium {
 }
 /* Rating */
 .rating span {
-  color: #f0c040;
+  color: #29f800;
   margin: 0.1rem;
 }

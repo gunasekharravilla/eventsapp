@@ -1,5 +1,6 @@
 import React from "react";
 import data from "./data";
+import Event from "./components/Event";
 function App() {
   return (
     <div className="grid-container">
@@ -17,16 +18,7 @@ function App() {
         <div>
           <div className="row center">
             {data.events.map((event) => (
-              <div key={event._id} className="card">
-                <a href={`/event/${event._id}`}>
-                  <img className="medium" src={event.image} alt={event.name} />
-                </a>
-                <div className="card-body">
-                  <a href={`/event/${event._id}`}>
-                    <h2>{event.name}</h2>
-                  </a>
-                </div>
-              </div>
+              <Event key={event._id} event={event}></Event>
             ))}
           </div>
         </div>
