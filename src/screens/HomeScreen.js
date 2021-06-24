@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Event from "../components/Event";
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 
 function HomeScreen() {
   const [events, setEvents] = useState([]);
@@ -10,9 +10,9 @@ function HomeScreen() {
   const [error, setError] = useState(false);
   useEffect(() => {
     const fecthData = async () => {
-       try {
+      try {
         setLoading(true);
-        const { data } = await axios.get('/api/events');
+        const { data } = await axios.get("/api/events");
         setLoading(false);
         setEvents(data);
       } catch (err) {
@@ -24,7 +24,7 @@ function HomeScreen() {
   }, []);
   return (
     <div>
-     {loading ? (
+      {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
