@@ -21,8 +21,8 @@ export default function Event(props) {
       <ul>
         <li>
           <div className="row">
-            <div>Registrations:{event.seatCount} Seats Available</div>
             <div>
+              {event.seatCount} Seats Available Registrations:
               {event.seatCount > 0 ? (
                 <span className="success">Open</span>
               ) : (
