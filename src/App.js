@@ -75,7 +75,11 @@ function App(props) {
         </header>
         <main>
           <Route path="/" component={HomeScreen} exact></Route>
-          <Route path="/event/:_id/edit" component={EventEditScreen}></Route>
+          <Route
+            path="/event/:id/edit"
+            component={EventEditScreen}
+            exact
+          ></Route>
         </main>
         <footer className="row center">
           This is Screening Test Don't claim on this
