@@ -112,7 +112,7 @@ export default function EventEditScreen(props) {
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Edit Event {eventId}</h1>
+          <h1>Create Event {eventId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -123,7 +123,7 @@ export default function EventEditScreen(props) {
         ) : (
           <>
             <div>
-              <label htmlFor="title">Name</label>
+              <label htmlFor="title">Title</label>
               <input
                 id="title"
                 type="text"
@@ -180,7 +180,7 @@ export default function EventEditScreen(props) {
             <div>
               <label></label>
               <button className="primary" type="submit">
-                Update
+                Submit Event
               </button>
             </div>
           </>

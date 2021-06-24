@@ -43,7 +43,6 @@ function App(props) {
   useEffect(() => {
     if (successCreate) {
       dispatch({ type: EVENT_CREATE_RESET });
-
       props.history.push(`/event/${createdEvent._id}/edit`);
     }
   }, [createdEvent, dispatch, props.history, successCreate]);
@@ -76,11 +75,7 @@ function App(props) {
         </header>
         <main>
           <Route path="/" component={HomeScreen} exact></Route>
-          <Route
-            path="/event/:id/edit"
-            component={EventEditScreen}
-            exact
-          ></Route>
+          <Route path="/event/:_id/edit" component={EventEditScreen}></Route>
         </main>
         <footer className="row center">
           This is Screening Test Don't claim on this

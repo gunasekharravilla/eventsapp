@@ -15,10 +15,7 @@ const EVENT_UPDATE_SUCCESS = "EVENT_UPDATE_SUCCESS";
 const EVENT_UPDATE_FAIL = "EVENT_UPDATE_FAIL";
 const EVENT_UPDATE_RESET = "EVENT_UPDATE_RESET";
 
-export const eventDetailsReducer = (
-  state = { event: {}, loading: true },
-  action
-) => {
+export const eventDetailsReducer = (state = { loading: true }, action) => {
   switch (action.type) {
     case EVENT_DETAILS_REQUEST:
       return { loading: true };
