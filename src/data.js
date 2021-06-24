@@ -6,7 +6,7 @@ const data = {
       image: "/images/p1.jpg",
       rating: 4.5,
       seatCount: 20,
-      numReviews: 11,
+      numReviews: 10,
       description:
         "Attendees gain hands-on experience with the latest version of React and the tools for developing React applications.",
     },
