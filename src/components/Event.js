@@ -5,10 +5,10 @@ export default function Event(props) {
   const { event } = props;
   return (
     <div key={event._id} className="card">
-      <img className="medium" src={event.image} alt={event.name} />
+      <img className="medium" src={event.image} alt={event.title} />
 
       <div className="card-body">
-        <h2>{event.name}</h2>
+        <h2>{event.title}</h2>
 
         <Rating rating={event.rating} numReviews={event.numReviews}></Rating>
       </div>
@@ -32,8 +32,7 @@ export default function Event(props) {
           </div>
         </li>
         {event.seatCount > 0 && (
-
-        <button className="primary block">Register</button>
+          <button className="primary block">Register</button>
         )}
       </ul>
     </div>
