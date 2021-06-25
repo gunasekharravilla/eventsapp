@@ -1,5 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
+//import EventEditScreen from "../screens/EventEditScreen";
+//import { Route } from "react-router-dom";
 
 export default function Event(props) {
   const { event } = props;
@@ -8,8 +10,9 @@ export default function Event(props) {
       <img className="medium" src={event.image} alt={event.title} />
 
       <div className="card-body">
-        <h2>{event.title}</h2>
-
+        <a href={`/event/${event._id}/edit`}>
+          <h2>{event.title}</h2>
+        </a>
         <Rating rating={event.rating} numReviews={event.numReviews}></Rating>
       </div>
       <ul>

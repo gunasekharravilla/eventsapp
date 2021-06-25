@@ -6,12 +6,15 @@ import HomeScreen from "./screens/HomeScreen";
 import LoadingBox from "./components/LoadingBox";
 import MessageBox from "./components/MessageBox";
 import EventEditScreen from "./screens/EventEditScreen";
+//import { useHistory } from "react-router-dom";
+//import { history } from "history";
 
 function App(props) {
   const EVENT_CREATE_REQUEST = "EVENT_CREATE_REQUEST";
   const EVENT_CREATE_SUCCESS = "EVENT_CREATE_SUCCESS";
   const EVENT_CREATE_FAIL = "EVENT_CREATE_FAIL";
   const EVENT_CREATE_RESET = "EVENT_CREATE_RESET";
+  //const history = useHistory();
 
   const createEvent = () => async (dispatch) => {
     dispatch({ type: EVENT_CREATE_REQUEST });

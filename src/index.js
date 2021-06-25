@@ -7,11 +7,14 @@ import reportWebVitals from "./reportWebVitals";
 import store from "./store.js";
 import { Provider } from "react-redux";
 //import history from "./history";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </React.StrictMode>
     ,
   </Provider>,
